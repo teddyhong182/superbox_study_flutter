@@ -24,8 +24,12 @@ class MyApp extends StatelessWidget {
             ),
             body: Row(
               children: [
-                Flexible(child: Container(color: Colors.blue), flex: 3),
-                Flexible(child: Container(color: Colors.green), flex: 7),
+                // 박스폭을 %로 주고 싶으면 Flexible
+                // 박스 하나 넓게 채우려면 Expanded
+                Expanded(child: Container(color: Colors.blue)),
+                Container(width: 100, color: Colors.green),
+                // Flexible(child: Container(color: Colors.blue), flex: 3),
+                // Flexible(child: Container(color: Colors.green), flex: 7),
               ],
             )
         )
