@@ -15,15 +15,23 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         // 상중하로 나눠주는 Scaffold() 위젯
         home: Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround, // flex 와 유사
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Icon(Icons.star),
-          Icon(Icons.star),
-          Icon(Icons.star)
-        ], // warning 은 lint 에 추가하여 설정 해제 가능
-      ),
+          appBar: AppBar(
+            title: Text('메롱')
+          ),
+          body: Container(),
+          bottomNavigationBar: BottomAppBar(
+            child: SizedBox(
+              height: 100,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: const[
+                    Icon(Icons.star),
+                    Icon(Icons.star),
+                    Icon(Icons.star),
+                ]
+              ),
+            ),
+          ),
     ));
   }
 }
