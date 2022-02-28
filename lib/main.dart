@@ -11,7 +11,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Container( width: 50, height: 50, color: Colors.blue )
+      home: Center(
+        child: Container( width: 50, height: 50, color: Colors.blue ),
+      )
+      // home: Container( width: 50, height: 50, color: Colors.blue )
       // home: Container() // 투명한 박스
       // assets/image1.png 는 이미지 안 나오네..
       // home: Image.asset('image1.png')
