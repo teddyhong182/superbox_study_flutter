@@ -11,7 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Text('안녕')
+      home: Icon(Icons.shop)
+      // home: Text('안녕')
     );
 
   }
