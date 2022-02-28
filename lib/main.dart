@@ -22,33 +22,7 @@ class MyApp extends StatelessWidget {
                 leading: Icon(Icons.star),
                 title: Text('앱임'),
             ),
-            body: Container(
-              height: 150,
-              padding: EdgeInsets.all(10),
-              child: Row(
-                children: [
-                  Image.asset('image1.png', width: 150),
-                  Container(
-                    width: 300,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('카메라팝니다.'),
-                        Text('종로 1'),
-                        Text('7000원'),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            Icon(Icons.favorite),
-                            Text('4'),
-                          ],
-                        ),
-                      ],
-                    )
-                  )
-                ],
-            ),
-            )
+            body: ShopItem()
         )
     );
 
@@ -87,3 +61,16 @@ class MyApp extends StatelessWidget {
     // ));
   }
 }
+
+// 커스텀 위젯
+class ShopItem extends StatelessWidget {
+  const ShopItem({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      child: Text('Hi!!!'),
+    );
+  }
+}
+
