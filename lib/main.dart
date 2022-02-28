@@ -10,16 +10,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // custom design 을 개발하고 싶어도 MaterialApp 으로 하자 (디자인만 사용하지 않으면 됨)
+
     return MaterialApp(
-      home: Center(
-        child: Container( width: 50, height: 50, color: Colors.blue ),
+      // 상중하로 나눠주는 Scaffold() 위젯
+      home: Scaffold(
+        appBar: AppBar(),
+        body: Container(),
+        bottomNavigationBar: BottomAppBar( child: Text('text'),),
       )
-      // home: Container( width: 50, height: 50, color: Colors.blue )
-      // home: Container() // 투명한 박스
-      // assets/image1.png 는 이미지 안 나오네..
-      // home: Image.asset('image1.png')
-      // home: Icon(Icons.shop)
-      // home: Text('안녕')
     );
 
   }
