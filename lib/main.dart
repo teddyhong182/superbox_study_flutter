@@ -15,8 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         // 상중하로 나눠주는 Scaffold() 위젯
         home: Scaffold(
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.center, // flex 와 유사
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround, // flex 와 유사
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Icon(Icons.star),
