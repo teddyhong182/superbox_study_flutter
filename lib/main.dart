@@ -22,23 +22,14 @@ class MyApp extends StatelessWidget {
                 leading: Icon(Icons.star),
                 title: Text('앱임'),
             ),
-            body: SizedBox(
-                child: ElevatedButton(
-                  child: Text('글자'),
-                  onPressed: () {},
-                )
-                // child: TextButton(
-                //   child: Text('글자'),
-                //   onPressed: () {},
-                // )
-
-                // child: Text(
-                //   '안녕하세요.',
-                //   style: TextStyle(
-                //       fontSize: 30, color: Color.fromRGBO(255, 0, 0, 0.0)),
-                // ),
-                // child: Icon(Icons.star),
-                )));
+            body: Row(
+              children: [
+                Flexible(child: Container(color: Colors.blue), flex: 3),
+                Flexible(child: Container(color: Colors.green), flex: 7),
+              ],
+            )
+        )
+    );
 
     // return MaterialApp(
     //     home: Scaffold(
