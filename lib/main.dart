@@ -11,7 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Icon(Icons.shop)
+      home: Image.asset('image1.png')
+      // home: Icon(Icons.shop)
       // home: Text('안녕')
     );
 
