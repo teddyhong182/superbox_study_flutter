@@ -22,15 +22,32 @@ class MyApp extends StatelessWidget {
                 leading: Icon(Icons.star),
                 title: Text('앱임'),
             ),
-            body: Row(
-              children: [
-                // 박스폭을 %로 주고 싶으면 Flexible
-                // 박스 하나 넓게 채우려면 Expanded
-                Expanded(child: Container(color: Colors.blue)),
-                Container(width: 100, color: Colors.green),
-                // Flexible(child: Container(color: Colors.blue), flex: 3),
-                // Flexible(child: Container(color: Colors.green), flex: 7),
-              ],
+            body: Container(
+              height: 150,
+              padding: EdgeInsets.all(10),
+              child: Row(
+                children: [
+                  Image.asset('image1.png', width: 150),
+                  Container(
+                    width: 300,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('카메라팝니다.'),
+                        Text('종로 1'),
+                        Text('7000원'),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Icon(Icons.favorite),
+                            Text('4'),
+                          ],
+                        ),
+                      ],
+                    )
+                  )
+                ],
+            ),
             )
         )
     );
