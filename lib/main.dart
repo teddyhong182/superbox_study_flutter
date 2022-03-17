@@ -5,6 +5,7 @@ void main() {
 }
 
 // main page setting
+// 상태가 없는 위젯
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -71,6 +72,26 @@ class ShopItem extends StatelessWidget {
     return SizedBox(
       child: Text('Hi!!!'),
     );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  // MyHomePage({Key key, this.title}) : super(key: key);
+
+  // final String title;
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+// 상태에 따라 그려질 코드를 작성
+class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0; // 변경 가능한 상태
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold();
+
   }
 }
 
