@@ -76,9 +76,10 @@ class ShopItem extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
+  // 생성자
   // MyHomePage({Key key, this.title}) : super(key: key);
 
-  // final String title;
+  final String title;
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -88,10 +89,20 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0; // 변경 가능한 상태
 
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
-
+    return Scaffold(
+      appBar: AppBar(
+        // StatefulWidget 클래스에 접근하려면 widget 프로퍼티를 사용
+        title: Text(widget.title),
+      ),
+    );
   }
 }
 
