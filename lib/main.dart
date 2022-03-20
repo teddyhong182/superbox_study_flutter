@@ -5,7 +5,6 @@ import 'package:superbox_study_flutter/second_page.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -31,13 +30,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   var _index = 0; // 페이지 인덱스 0, 1, 2
   var _pages = [
     Page1(),
     Page2(),
     Page3(),
-
   ];
 
   @override
@@ -47,14 +44,12 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.white,
         title: Text(
           '복잡한 UI',
-          style: TextStyle(color: Colors.black),  // 글자색을 검은색으로
+          style: TextStyle(color: Colors.black), // 글자색을 검은색으로
         ),
-        centerTitle: true,  // 제목을 가운데로
+        centerTitle: true, // 제목을 가운데로
         actions: <Widget>[
           IconButton(
-            onPressed: () {
-
-            },
+            onPressed: () {},
             icon: Icon(
               Icons.add,
               color: Colors.black,
@@ -94,12 +89,25 @@ class Page1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        '홈 페이지',
-        style: TextStyle(fontSize: 40),
-      ),
+    return Column(
+      children: <Widget>[
+        _buildTop(),
+        _buildMiddle(),
+        _buildBottom(),
+      ],
     );
+  }
+
+  Widget _buildTop() {
+    return Text('Top');
+  }
+
+  Widget _buildMiddle() {
+    return Text('Middle');
+  }
+
+  Widget _buildBottom() {
+    return Text('Bottom');
   }
 }
 
