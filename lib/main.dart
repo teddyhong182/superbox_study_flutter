@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        // primaryColor:  Colors.white,
       ),
       home: MyHomePage(),
       // routes: {
@@ -37,7 +38,23 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('복잡한 UI'),
+        backgroundColor: Colors.white,
+        title: Text(
+          '복잡한 UI',
+          style: TextStyle(color: Colors.black),  // 글자색을 검은색으로
+        ),
+        centerTitle: true,  // 제목을 가운데로
+        actions: <Widget>[
+          IconButton(
+            onPressed: () {
+
+            },
+            icon: Icon(
+              Icons.add,
+              color: Colors.black,
+            ),
+          )
+        ],
       ),
       body: Center(
         child: Text(
