@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:superbox_study_flutter/first_page.dart';
 import 'package:superbox_study_flutter/second_page.dart';
@@ -103,7 +104,28 @@ class Page1 extends StatelessWidget {
   }
 
   Widget _buildMiddle() {
-    return Text('Middle');
+    // carousel_slider 의존성 추가
+    // 슬라이더 작성
+    // 공사중 표시 끄기
+    // 슬라이더를 입맛에 맞게 수정
+    return CarouselSlider(
+      height: 400.0,
+      items: [1,2,3,4,5].map((i) {
+        return Builder(
+          builder: (BuildContext context) {
+            return Container(
+              width: MediaQuery.of(context).size.width,
+              margin: EdgeInsets.symmetric(horizontal: 5.0),
+              decoration: BoxDecoration(
+                color: Colors.amber,
+              ),
+              child: Text('text $i', style: TextStyle(fontSize: 16.0),),
+            );
+          },
+        );
+      }).toList(),
+    );
+
   }
 
   Widget _buildBottom() {
